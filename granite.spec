@@ -6,11 +6,11 @@ apps built for elementary.}
 
 Name:           granite
 Summary:        elementary companion library for GTK+ and GLib
-Version:        5.3.0
+Version:        5.5.0
 Release:        1%{?dist}
 License:        LGPLv3+
 URL:            https://github.com/elementary/%{name}
-Source:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Source:         %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  appstream-glib
