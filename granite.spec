@@ -6,8 +6,8 @@ apps built for elementary.}
 
 Name:           granite
 Summary:        elementary companion library for GTK+ and GLib
-Version:        5.5.0
-Release:        1%{?dist}
+Version:        6.0.0
+Release:        1
 License:        LGPLv3+
 URL:            https://github.com/elementary/%{name}
 Source:         %{url}/archive/%{version}/%{name}-%{version}.tar.gz
@@ -39,11 +39,7 @@ This package contains the development headers.
 
 
 %build
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1574700391
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -65,8 +61,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %doc README.md
 %license COPYING
 
-%{_libdir}/libgranite.so.5
-%{_libdir}/libgranite.so.5.*
+%{_libdir}/libgranite.so*
 %{_libdir}/girepository-1.0/Granite-1.0.typelib
 %{_datadir}/icons/hicolor/*/actions/appointment.svg
 %{_datadir}/icons/hicolor/*/actions/open-menu.svg
