@@ -1,8 +1,4 @@
 %global abi_package %{nil}
-%global common_description %{expand:
-Granite is a companion library for GTK+ and GLib. Among other things, it
-provides complex widgets and convenience functions designed for use in
-apps built for elementary.}
 
 Name:           granite
 Summary:        elementary companion library for GTK+ and GLib
@@ -24,13 +20,13 @@ Requires:       gsettings-desktop-schemas
 Requires:       hicolor-icon-theme
 
 %description    
-Granite is a companion library for GTK+ and GLib
+Granite is a companion library for GTK+ and GLib.
 
 %package        dev
 Summary:        Granite Toolkit development headers
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description    
-dev headers for Granite
+%description    dev
+Dev headers for Granite.
 
 %prep
 %setup
