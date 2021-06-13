@@ -23,12 +23,14 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 Requires:       gsettings-desktop-schemas
 Requires:       hicolor-icon-theme
 
-%description    Granite is a companion library for GTK+ and GLib
+%description    
+Granite is a companion library for GTK+ and GLib
 
 %package        dev
 Summary:        Granite Toolkit development headers
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description    This package contains the development headers.
+%description    
+dev headers for Granite
 
 %prep
 %setup
