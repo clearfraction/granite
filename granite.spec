@@ -23,20 +23,15 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 Requires:       gsettings-desktop-schemas
 Requires:       hicolor-icon-theme
 
-%description %{common_description}
-
+%description    Granite is a companion library for GTK+ and GLib
 
 %package        dev
 Summary:        Granite Toolkit development headers
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description    dev %{common_description}
-
-This package contains the development headers.
-
+%description    This package contains the development headers.
 
 %prep
 %setup
-
 
 %build
 export LANG=C.UTF-8
@@ -53,9 +48,7 @@ ninja -v -C builddir
 
 %install
 DESTDIR=%{buildroot} ninja -C builddir install
-
 %find_lang granite
-
 
 %files -f granite.lang
 %doc README.md
@@ -84,4 +77,3 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %changelog
 # based on https://koji.fedoraproject.org/koji/packageinfo?packageID=23477
-
